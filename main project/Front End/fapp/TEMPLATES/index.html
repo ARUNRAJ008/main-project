@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LetPlay</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-black text-white">
+
+    <!-- Navbar -->
+    <nav class="flex justify-between items-center p-4 bg-black fixed w-full z-10 shadow-lg">
+        <a href="index" class="text-2xl font-bold text-red-500">WePlay</h1>
+        <div class="hidden md:flex space-x-6">
+            <a href="index" class="hover:text-red-500">Home</a>
+            <a href="#" class="hover:text-red-500">About Us</a>
+        </div>
+        <a href="login" class="text-red-500 font-bold hover:text-red-400">Login</a>
+        <button id="menuToggle" class="md:hidden text-red-500 focus:outline-none">
+            <span id="menuIcon">☰</span>
+        </button>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="absolute top-16 left-0 w-full bg-black flex flex-col items-center space-y-4 p-4 md:hidden hidden">
+        <a href="index" class="hover:text-red-500">Home</a>
+        <a href="#" class="hover:text-red-500">About Us</a>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="relative h-[500px] flex items-center justify-center bg-gray-900">
+        <img src="https://via.placeholder.com/1200x500" alt="Featured Movie" class="absolute inset-0 w-full h-full object-cover opacity-60">
+        <div class="relative text-center">
+            <h2 class="text-4xl font-bold">Let's Start</h2>
+            <p class="mt-2">An amazing sports experience</p>
+            <button class="mt-4 px-6 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600">Register Now</button>
+        </div>
+    </div>
+
+    <!-- Trending Section -->
+    <div class="p-6">
+        <h2 class="text-2xl font-semibold mb-4">Trending Now</h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="text-center">
+                <img src="https://via.placeholder.com/300x450" alt="Turf One" class="w-full h-[300px] object-cover rounded-lg">
+                <p class="mt-2">Turf One</p>
+            </div>
+            <div class="text-center">
+                <img src="https://via.placeholder.com/300x450" alt="Turf Two" class="w-full h-[300px] object-cover rounded-lg">
+                <p class="mt-2">Turf Two</p>
+            </div>
+            <div class="text-center">
+                <img src="https://via.placeholder.com/300x450" alt="Turf Three" class="w-full h-[300px] object-cover rounded-lg">
+                <p class="mt-2">Turf Three</p>
+            </div>
+            <div class="text-center">
+                <img src="https://via.placeholder.com/300x450" alt="Turf Four" class="w-full h-[300px] object-cover rounded-lg">
+                <p class="mt-2">Turf Four</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript for Mobile Menu Toggle
+        const menuToggle = document.getElementById("menuToggle");
+        const mobileMenu = document.getElementById("mobileMenu");
+        const menuIcon = document.getElementById("menuIcon");
+
+        menuToggle.addEventListener("click", () => {
+            mobileMenu.classList.toggle("hidden");
+            menuIcon.textContent = mobileMenu.classList.contains("hidden") ? "☰" : "✖";
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        function verifyOTP() {
+            document.getElementById('passwordFields').classList.remove('hidden');
+        }
+    </script>
+</head>
+<body class="bg-gray-100 flex justify-center items-center min-h-screen">
+    <div class="bg-white p-6 rounded-lg shadow-lg w-full max-w-lg">
+        <h2 class="text-2xl font-bold text-center mb-4">Create Account</h2>
+        
+        <form id="createAccountForm">
+            <div class="mb-4">
+                <label class="block font-semibold">Turf Name</label>
+                <input type="text" class="w-full p-2 border rounded-lg" placeholder="Enter turf name">
+            </div>
+            
+            <div class="mb-4">
+                <label class="block font-semibold">Username</label>
+                <input type="text" class="w-full p-2 border rounded-lg" placeholder="Enter username">
+            </div>
+            
+            <div class="mb-4">
+                <label class="block font-semibold">Mobile Number</label>
+                <input type="tel" class="w-full p-2 border rounded-lg" placeholder="Enter mobile number">
+                <button type="button" class="mt-2 bg-blue-500 text-white p-2 rounded-lg w-full">Send OTP</button>
+            </div>
+            
+            <div class="mb-4">
+                <label class="block font-semibold">Enter OTP</label>
+                <input type="text" class="w-full p-2 border rounded-lg" placeholder="Enter OTP">
+                <button type="button" class="mt-2 bg-green-500 text-white p-2 rounded-lg w-full" onclick="verifyOTP()">Verify OTP</button>
+            </div>
+            
+            <div id="passwordFields" class="hidden">
+                <div class="mb-4">
+                    <label class="block font-semibold">Password</label>
+                    <input type="password" class="w-full p-2 border rounded-lg" placeholder="Enter password">
+                </div>
+                
+                <div class="mb-4">
+                    <label class="block font-semibold">Re-enter Password</label>
+                    <input type="password" class="w-full p-2 border rounded-lg" placeholder="Re-enter password">
+                </div>
+            </div>
+            
+            <div class="mb-4">
+                <label class="block font-semibold">Email</label>
+                <input type="email" class="w-full p-2 border rounded-lg" placeholder="Enter email">
+            </div>
+            
+            <div class="mb-4">
+                <label class="block font-semibold">Size</label>
+                <input type="text" class="w-full p-2 border rounded-lg" placeholder="Enter turf size">
+            </div>
+            
+            <div class="mb-4">
+                <label class="block font-semibold">Shape</label>
+                <input type="text" class="w-full p-2 border rounded-lg" placeholder="Enter turf shape">
+            </div>
+            
+            <div class="mb-4">
+                <label class="block font-semibold">Cost</label>
+                <input type="number" class="w-full p-2 border rounded-lg" placeholder="Enter cost">
+            </div>
+            
+            <div class="mb-4">
+                <label class="block font-semibold">Facilities</label>
+                <textarea class="w-full p-2 border rounded-lg" placeholder="Enter available facilities"></textarea>
+            </div>
+            
+            <div class="mb-4">
+                <label class="block font-semibold">Logo</label>
+                <input type="file" class="w-full p-2 border rounded-lg">
+            </div>
+            
+            <div class="mb-4">
+                <label class="block font-semibold">Turf Images (4)</label>
+                <input type="file" multiple class="w-full p-2 border rounded-lg" accept="image/*">
+            </div>
+            
+            <div class="mb-4">
+                <label class="block font-semibold">Turf Videos (2)</label>
+                <input type="file" accept="video/*" multiple class="w-full p-2 border rounded-lg">
+            </div>
+            
+            <button type="submit" class="bg-blue-600 text-white p-2 rounded-lg w-full">Create Account</button>
+        </form>
+    </div>
+</body>
+</html>
