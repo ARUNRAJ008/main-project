@@ -6,56 +6,66 @@
     <title>LetPlay</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-black text-white">
+<body class="bg-white text-black">
+    {%block content%}
+    
 
     <!-- Navbar -->
-    <nav class="flex justify-between items-center p-4 bg-black fixed w-full z-10 shadow-lg">
-        <a href="index" class="text-2xl font-bold text-red-500">WePlay</h1>
+    <nav class="flex justify-between items-center p-4 bg-white fixed w-full z-10 shadow-lg">
+        <a href="index" class="text-2xl font-bold text-blue-500">WePlay</a>
         <div class="hidden md:flex space-x-6">
-            <a href="index" class="hover:text-red-500">Home</a>
-            <a href="#" class="hover:text-red-500">About Us</a>
+            <a href="index" class="hover:text-blue-500">Home</a>
+            <a href="about_us" class="hover:text-blue-500">About Us</a>
         </div>
-        <a href="login" class="text-red-500 font-bold hover:text-red-400">Login</a>
-        <button id="menuToggle" class="md:hidden text-red-500 focus:outline-none">
+        <a href="login" class="text-blue-500 font-bold hover:text-blue-400">Login</a>
+        <button id="menuToggle" class="md:hidden text-blue-500 focus:outline-none">
             <span id="menuIcon">☰</span>
         </button>
     </nav>
 
     <!-- Mobile Menu -->
-    <div id="mobileMenu" class="absolute top-16 left-0 w-full bg-black flex flex-col items-center space-y-4 p-4 md:hidden hidden">
-        <a href="index" class="hover:text-red-500">Home</a>
-        <a href="#" class="hover:text-red-500">About Us</a>
+    <div id="mobileMenu" class="absolute top-16 left-0 w-full bg-white flex flex-col items-center space-y-4 p-4 md:hidden hidden shadow-md">
+        <a href="index" class="hover:text-blue-500">Home</a>
+        <a href="about_us" class="hover:text-blue-500">About Us</a>
     </div>
 
     <!-- Hero Section -->
-    <div class="relative h-[500px] flex items-center justify-center bg-gray-900">
+    <div class="relative h-[500px] flex items-center justify-center bg-gray-200">
         <img src="https://via.placeholder.com/1200x500" alt="Featured Movie" class="absolute inset-0 w-full h-full object-cover opacity-60">
         <div class="relative text-center">
-            <h2 class="text-4xl font-bold">Let's Start</h2>
-            <p class="mt-2">An amazing sports experience</p>
-            <button class="mt-4 px-6 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600">Register Now</button>
+            <h2 class="text-4xl font-bold text-gray-900">Let's Start</h2>
+            <p class="mt-2 text-gray-700">An amazing sports experience</p>
+            <button class="mt-4 px-6 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600">Register Now</button>
         </div>
     </div>
 
     <!-- Trending Section -->
     <div class="p-6">
-        <h2 class="text-2xl font-semibold mb-4">Trending Now</h2>
+        <h2 class="text-2xl font-semibold mb-4 text-gray-900">Trending Now</h2>
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
             <div class="text-center">
-                <img src="https://via.placeholder.com/300x450" alt="Turf One" class="w-full h-[300px] object-cover rounded-lg">
-                <p class="mt-2">Turf One</p>
+                <a href="next" class="block">
+                <img src="assets/temp/one.jpg" alt="Turf One" class="w-full h-[300px] object-cover rounded-lg shadow-md">
+                <p class="mt-2 text-gray-800">Turf One</p>
+                </a>
             </div>
             <div class="text-center">
-                <img src="https://via.placeholder.com/300x450" alt="Turf Two" class="w-full h-[300px] object-cover rounded-lg">
-                <p class="mt-2">Turf Two</p>
+                <a href="next" class="block">
+                    <img src="assets/temp/two.jpg" alt="Turf One" class="w-full h-[300px] object-cover rounded-lg shadow-md">
+                    <p class="mt-2 text-gray-800">Turf Two</p>
+                    </a>
             </div>
             <div class="text-center">
-                <img src="https://via.placeholder.com/300x450" alt="Turf Three" class="w-full h-[300px] object-cover rounded-lg">
-                <p class="mt-2">Turf Three</p>
+                <a href="next" class="block">
+                    <img src="assets/temp/three.jpg" alt="Turf One" class="w-full h-[300px] object-cover rounded-lg shadow-md">
+                    <p class="mt-2 text-gray-800">Turf Three</p>
+                    </a>
             </div>
             <div class="text-center">
-                <img src="https://via.placeholder.com/300x450" alt="Turf Four" class="w-full h-[300px] object-cover rounded-lg">
-                <p class="mt-2">Turf Four</p>
+                <a href="next" class="block">
+                    <img src="assets/temp/four.jpg" alt="Turf One" class="w-full h-[300px] object-cover rounded-lg shadow-md">
+                    <p class="mt-2 text-gray-800">Turf Four</p>
+                    </a>
             </div>
         </div>
     </div>
@@ -71,6 +81,7 @@
             menuIcon.textContent = mobileMenu.classList.contains("hidden") ? "☰" : "✖";
         });
     </script>
+    {%endblock%}
 
 </body>
 </html>

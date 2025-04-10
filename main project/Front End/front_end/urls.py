@@ -20,8 +20,9 @@ from fapp import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.index),
-    path('about/', views.about),
+    path('', views.index,name='home'),
+    path('index/', views.index),
+    path('about_us/', views.about),
     path('admin_addAccount/', views.admin_addAccount),
     path('admin_database/', views.admin_database),
     path('admin_home/', views.admin_home),
@@ -35,7 +36,8 @@ urlpatterns = [
     path('profile_edit/', views.profile_edit),
     path('profile/', views.profile),
     path('profile_feedback/', views.profile_feedback),
-    path('login/sigup/', views.sigup),
+    path('sigup/', views.sigup),
+    path('next', views.next),
     path('slotBooking/', views.slotBooking),
 
 
