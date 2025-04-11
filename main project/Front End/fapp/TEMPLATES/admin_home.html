@@ -6,9 +6,24 @@
     <title>Image Navigation</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="flex items-center justify-center min-h-screen bg-gray-100">
-    
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 p-6">
+<body >
+
+    <!-- Navbar -->
+    <nav class="flex justify-between items-center p-4 bg-white fixed w-full z-10 shadow-lg">
+        <a href="index" class="text-2xl font-bold text-blue-500">WePlay</a>
+        <div class="hidden md:flex space-x-6">
+            <a href="index" class="hover:text-blue-500">Home</a>
+            <a href="about_us" class="hover:text-blue-500">About Us</a>
+        </div>
+        <a href="login" class="text-blue-500 font-bold hover:text-blue-400">Login</a>
+        <button id="menuToggle" class="md:hidden text-blue-500 focus:outline-none">
+            <span id="menuIcon">☰</span>
+        </button>
+    </nav>
+
+
+    <div class="flex items-center justify-center min-h-screen bg-gray-100">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 p-6">
         <a href="admin_addAccount" class="block">
             <img src="assets/add.jpg" alt="Image 1" class="w-full h-[300px] object-cover rounded-lg shadow-lg hover:opacity-80">
         </a>
@@ -18,6 +33,7 @@
         <a href="admin_event" class="block">
             <img src="assets/event.jpg" alt="Image 3" class="w-full h-[300px] object-cover rounded-lg shadow-lg hover:opacity-80">
         </a>
+    </div>
     </div>
 </body>
 </html>
