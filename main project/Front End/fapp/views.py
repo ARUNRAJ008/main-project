@@ -51,3 +51,5 @@ def sigup(request):
 
 def slotBooking(request):
     return render(request, 'slotBooking.html')
+def next(request):
+    return render(request, 'next.html')

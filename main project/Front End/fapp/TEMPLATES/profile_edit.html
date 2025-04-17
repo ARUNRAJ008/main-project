@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PlayZone</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-cover bg-center min-h-screen" style="background-image: url('assets/temp/bg.jpg');">
+  
+  <!-- Navbar -->
+  <nav class="flex justify-between items-center p-4 bg-white fixed w-full z-10 shadow-lg">
+    <a href="index" class="text-2xl font-bold text-blue-500">PlayZone</a>
+    <div class="hidden md:flex space-x-6">
+        <a href="about_us" class="hover:text-blue-500">About Us</a>
+    </div>
+    <a href="login" class="text-blue-500 font-bold hover:text-blue-400">
+      <img src="assets/login.jpg" class="w-10 h-10 rounded-full object-cover" alt="Login">
+    </a>
+    <button id="menuToggle" class="md:hidden text-blue-500 focus:outline-none">
+      <span id="menuIcon">☰</span>
+    </button>
+  </nav>
+
+  <!-- Content Wrapper -->
+  <div class="flex justify-center items-center min-h-screen pt-24 px-4 bg-white/70 backdrop-blur-sm">
+    <div class="bg-white p-6 rounded-lg shadow-lg w-full max-w-md">
+      <h2 class="text-2xl font-bold text-center mb-6">Edit Profile</h2>
+
+      <form class="flex flex-col gap-4">
+        <div class="flex flex-col items-center gap-2">
+          <img src="assets/event.jpg" alt="Profile Image" class="w-24 h-24 rounded-full border shadow" />
+          <label for="profile" class="block text-sm text-gray-600">Upload Profile Picture</label>
+          <input type="file" id="profile" name="profile" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
+        </div>
+
+        <div>
+          <label class="block text-sm text-gray-600 mb-1">Name</label>
+          <input type="text" value="arun" class="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" />
+        </div>
+
+        <div>
+          <label class="block text-sm text-gray-600 mb-1">Password</label>
+          <input type="password" value="helo" class="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" />
+        </div>
+
+        <div>
+          <label class="block text-sm text-gray-600 mb-1">Re-type Password</label>
+          <input type="password" value="helo" class="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" />
+        </div>
+
+        <button type="submit" class="mt-4 bg-blue-500 text-white py-2 rounded-md hover:bg-blue-600 transition duration-200">
+          Save Changes
+        </button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
